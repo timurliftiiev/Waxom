@@ -1,0 +1,73 @@
+// Copyright
+
+.copyright {
+
+  // Wrapper
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 3rem 0;
+    }
+
+    // Left and Right
+    &__left,
+    &__right {
+      width: 50%;
+      font-family: $font-montserrat;
+      font-size: .8rem;
+      font-weight: 400;
+
+      @include mq(tablet-wide, max) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Left
+    &__left {
+      text-align: left;
+
+      @include mq(tablet-wide, max) {
+        text-align: center;
+      }
+    }
+
+    // Right
+    &__right {
+      text-align: right;
+
+      @include mq(tablet-wide, max) {
+        text-align: center;
+      }
+    }
+
+    // Text
+    &__text {
+      padding: 0 1.2rem;
+      color: lighten($color-black, 40%);
+      border-right: 1px solid lighten($color-black, 40%);
+
+      // Border
+      &--border {
+          border: none;
+      }
+
+      @include mq(tablet-wide, max) {
+        padding: 0 .5rem;
+        font-size: 0.5rem;
+      }
+    }
+
+    // Link
+    &__link {
+      display: inline-block;
+      color: $color-gray-dark;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: $color-brown;
+      }
+    }
+}
+

@@ -1,0 +1,15 @@
+// Search
+.search {
+  @include mq(tablet-wide, max) {
+    display: none;    
+}
+
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+  text-align: right;
+
+  &__item {
+      margin-right: 1rem;
+  }
+}

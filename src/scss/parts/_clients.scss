@@ -1,0 +1,33 @@
+// Clients
+
+.clients {
+    background-image: url('../img/clients-bg-min.jpg');
+    background-size: cover;
+
+    // Wrapper
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 0;
+    }
+    
+    // Item
+    &__item {
+      width: 25%;
+      padding: 2rem;
+      text-align: center;
+  
+      @include mq(tablet, max) {
+        width: 50%;
+      }
+  
+      @include mq(phone-wide, max) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  
+  

@@ -1,0 +1,16 @@
+// Header
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 10;
+
+  // Wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+}

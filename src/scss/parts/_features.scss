@@ -1,0 +1,95 @@
+// Features
+
+.features {
+  
+    // Wrapper
+     &__wrapper {
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+
+        @include mq(tablet, max) {
+          flex-wrap: wrap;
+        }
+    }
+
+    // Image Box
+    &__img-box {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+
+      @include mq(tablet, max) {
+        width: 100%;
+        padding: 0 1rem;
+      }
+
+      @include mq(phone-wide, max) {
+        height: 70vh;
+      }
+    }
+
+    // Text
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      padding: 1rem;
+
+      @include mq(tablet, max) {
+        display: flex;
+        width: 100%;
+        background: $color-gray-light;
+      }
+    }
+
+    // List
+    &__list {
+      margin: 0 3rem 3rem;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+
+        @include mq(tablet, max) {
+          margin-bottom: 3em;
+        }
+    }
+
+    // Item
+    &__item {
+      display: flex;
+      align-items: center;
+      font-family: $font-montserrat;
+      padding: .5rem 0;
+      width: 100%;
+      font-size: 1rem;
+      color: $color-black;
+
+      @include mq(tablet, max) {
+        justify-content: left;
+      }
+    }
+
+    // Description
+    &__description {
+      margin: 0 1.5rem;
+      text-align: left;
+
+      @include mq(desktop-wide, min) {
+        font-size: 1.2rem;
+      }
+    }
+
+    // Icon
+    &__icon {
+      font-size: 1rem;
+      color: $color-brown;
+
+      @include mq(desktop-wide, min) {
+        font-size: 1.2rem;
+      }
+    }
+}
+

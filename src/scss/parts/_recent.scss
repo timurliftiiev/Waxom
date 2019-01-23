@@ -1,0 +1,154 @@
+// Recents
+
+.recents {
+
+  // Wrapper
+    &__wrapper {
+      padding: 4rem 0 2rem;
+    }
+
+    // Gallery
+    &__gallery {
+      display: flex;
+      justify-content: space-around;
+
+      @include mq(tablet, max) {
+        flex-wrap: wrap;
+      }
+    }
+
+    // Item
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      font-size: 0;
+
+      @include mq(tablet, max) {
+          width: 100%;
+          margin-bottom: 2rem;
+      }
+
+      &:hover {
+          .recents__calendar {
+                background: rgba($color-black, .8);
+            }
+          .recents__text {
+                background: $color-brown-dark;
+                border: 1px solid transparent;
+            }
+          .recents__title {
+                color: $color-beige-light;
+            }
+          .recents__description {
+                color: $color-white;
+            }
+          .recents__number {
+                background: $color-beige-light;
+            }
+          .recents__month {
+                background: $color-beige;
+            }
+      }
+    }
+
+    // Text
+    &__text {
+      flex-grow: 1;
+      display: block;
+      padding: 1.5rem 2rem;
+      border: 1px solid $color-gray;
+      font-family: $font-montserrat;
+      font-size: .8rem;
+
+      @include mq(tablet, max) {
+        padding: 2rem;
+      }
+
+      @include mq(desktop-wide, min) {
+        font-size: 1rem;
+      }
+    }
+
+    // Title
+    &__title {
+      display: block;
+      margin-bottom: 0;
+      font-family: $font-raleway;
+      font-size: 1.1rem;
+      color: $color-black;
+      font-weight: 500;
+
+      @include mq(desktop-wide, min) {
+        font-size: 1.5rem;
+      }
+    }
+
+    // Description
+    &__description {
+      display: block;
+      margin: .5rem 0 1.5rem;
+      color: $color-brown-light;
+    }
+
+    // Link
+    &__link {
+      color: $color-beige-light;
+      text-decoration: none;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        width: 0;
+	      height: 0;
+	      border-top: 4px solid transparent;
+	      border-left: 8px solid $color-beige-light;
+	      border-bottom: 4px solid transparent;
+        }
+    }
+
+    // Image Box
+    &__img-box {
+      position: relative;
+    }
+
+    // Image
+    &__img {
+      width: 100%;
+    }
+
+    // Calendar
+    &__calendar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+    }
+
+    // Number and Month
+    &__number,
+    &__month {
+      display: block;
+      width: 55px;
+      text-align: center;
+      color: $color-white;
+    }
+
+    // Number
+    &__number {
+      font-family: $font-montserrat;
+      font-size: 1.5rem;
+      background: $color-brown-dark;
+      border-radius: 5px 5px 0 0;
+    }
+
+    // Month
+    &__month {
+      font-size: 12px;
+      background: darken($color-brown-dark, 10%);
+      border-radius: 0 0 5px 5px;
+    }
+}

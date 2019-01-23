@@ -1,0 +1,90 @@
+// Hero
+.hero {
+
+    // Text
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 2rem;
+        background-image: url('../img/bigslider/big-img1-min.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        // Second Slide
+        &--second {
+            background-image: url('../img/bigslider/Big-img2-min.jpg');
+        }
+
+        // Third Slide
+        &--third {
+            background-image: url('../img/bigslider/Big-img3-min.jpg');
+        }
+    }
+    
+    // Subtitle
+    &__subtitle {
+        margin-bottom: .5em;
+        font-family: $font-raleway;
+        font-size: 2rem;
+        font-weight: 300;
+        color: lighten($color-brown, 10%);
+
+        @include mq(tablet-wide, max) {
+            font-size: 1.5em;   
+        }
+
+        @include mq(tablet-small, max) {
+            font-size: 1em;   
+        }
+    }
+
+    // Title
+    &__title {
+        font-family: $font-raleway;
+        margin: 0;
+        padding: .5rem 0 1rem;
+        font-size: 3em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $color-white;
+
+        @include mq(tablet-wide, max) {
+            font-size: 2em;   
+        }
+
+        @include mq(tablet-small, max) {
+            margin-bottom: 1em;
+            font-size: 1.4em;  
+            line-height: 1em; 
+        }
+    }
+
+    // Description
+    &__description {
+        width: 40%;
+        margin-bottom: 3em;
+        padding: 0 1em;
+        text-align: center;
+        line-height: 24px;
+        font-size: .8em;
+        font-weight: 300;
+        color: $color-white;
+
+        @include mq(tablet, max) {
+            width: 80%;
+            line-height: 1.3em;
+        }
+
+        @include mq(tablet-small, max) {
+            margin-bottom: 2rem;
+        }
+
+        @include mq(desktop-wide, min) {
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+    }
+}

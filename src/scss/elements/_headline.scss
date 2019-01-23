@@ -1,0 +1,61 @@
+// Headline
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  // Title
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-family: $font-raleway;
+    color: darken($color-brown, 20%);
+    font-size: 2rem;
+
+    @include mq(desktop-wide, min) {
+      font-size: 2.5rem;
+    }
+
+    // Features Title
+    &--features {
+      margin-top: 3rem;
+      font-size: 1.5em;
+
+      @include mq(desktop-wide, min) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // Subtitle
+  &__subtitle {
+    width: 50%;
+    padding: 1rem 0 2rem;
+    text-align: center;
+    font-family: $font-montserrat;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $color-brown;
+
+    @include mq(desktop-wide, min) {
+      font-size: 1.2rem;
+    }
+
+    @include mq(tablet-small, max) {
+      width: 80%;
+    }
+
+    // Features Subtitle
+    &--features {
+      color: $color-black;
+
+      @include mq(tablet, max) {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}

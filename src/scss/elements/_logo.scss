@@ -1,0 +1,30 @@
+.logo {
+    @include mq(tablet-wide, max) {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+    
+    // Link
+    &__link {
+        display: block;
+        display: flex;
+        align-items: center;
+
+        @include mq(tablet-wide, max) {
+            width: 60%;
+        }
+    }
+
+    // TEXT
+    &__text {
+        font-family: $font-roboto;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: $color-beige;
+
+        @include mq(tablet-wide, max) {
+            display: none;    
+        }
+    }
+}

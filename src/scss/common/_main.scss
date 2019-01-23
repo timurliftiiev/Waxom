@@ -1,0 +1,21 @@
+// Main
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include interpolate(font-size, 320px, 1920px, 14px, 20px);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

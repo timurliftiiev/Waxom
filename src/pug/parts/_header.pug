@@ -1,0 +1,35 @@
+//- Header
+-var navItems = ['Home', 'About Us', 'Portfolio', 'Features', 'Blog', 'Pricing', 'Shortcodes', 'Contact'];
+-var links = ['#hero', '#services', '#portfolio', '#features', '#recent', '#presentation', '#clients', '#sitemap'];
+
+header.header
+    .grid
+      .header__wrapper
+        .logo
+          a(href="#").logo__link
+            img(src="img/logo-min.png" alt="Logo").logo__img
+            span.logo__text Waxom
+        nav.nav
+          ul.nav__list
+            li.nav__item
+              a(href="#hero").nav__link Home
+            li.nav__item
+              a(href="#services").nav__link About us
+            li.nav__item
+              a(href="#portfolio").nav__link Portfolio
+            li.nav__item
+              a(href="#features").nav__link Features
+            li.nav__item
+              a(href="#recent").nav__link Blog
+            li.nav__item
+              a(href="#presentation").nav__link Pricing
+            li.nav__item
+              a(href="#clients").nav__link Shortcodes
+            li.nav__item
+              a(href="#sitemap").nav__link Contact
+
+        .search
+          a(href="#").search__item
+            img(src="img/search-min.png" alt="search").search__img
+          a(href="#").search__item
+            img(src="img/bag-min.png" alt="basket").search__img 

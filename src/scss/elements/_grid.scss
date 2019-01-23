@@ -1,0 +1,11 @@
+// Grid
+.grid {
+    width: 100%;
+    padding: 0 3rem;
+    margin: 0 auto;
+
+    @include mq(tablet-small, max) {
+        padding: 0 2rem;
+    }
+}
+

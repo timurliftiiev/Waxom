@@ -1,0 +1,182 @@
+// Portfolio
+
+.portfolio {
+
+    // Wrapper
+    &__wrapper {
+        position: relative;
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    // Controls
+    &__controls {
+        margin-bottom: 3rem;
+
+        @include mq(phone, max) {
+            padding: 0 1rem;
+        }
+    }
+
+    // Btn
+    &__btn {
+        margin: .3rem;
+        padding: .5rem 2rem;
+        border: 1px solid $color-brown;
+        text-transform: none;
+        background: $color-white;
+        color: $color-brown;
+
+        &:hover,
+        &--active {
+            color: $color-white;
+            background: $color-brown;
+        }
+
+        // Button Border
+        &--border {
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid $color-brown;
+            }
+        }
+    }
+
+    // List
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2rem 0;
+    }
+
+    // Item
+    &__item {
+        display: none;
+        position: relative;
+        margin: 1rem;
+        width: 30%;
+        font-size: 0;
+        border-radius: 10px;
+
+        @include mq(tablet-wide, max) {
+            width: 47%;
+            margin: 1rem .5rem;
+        }
+
+        @include mq(tablet-small, max) {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        &:hover {
+            .portfolio__text {
+                background: $color-brown-dark;
+
+                &::before {
+                    border-bottom: 14px solid $color-brown-dark;
+                }
+            }
+            .portfolio__title {
+                color: $color-white;
+            }
+            .portfolio__subtitle {
+                color: $color-brown;
+            }
+            .portfolio__icon-box {
+                display: block;
+            }
+
+        }
+    }
+
+    // Inner
+    &__inner {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    // Image 
+    &__img {
+        width: 100%;
+    }
+
+    // Text
+    &__text {
+        flex-grow: 1;
+        position: relative;
+        padding: 2rem;
+        background: $color-gray-light;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -9%;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid $color-gray-light;
+        }
+    }
+
+    // Title
+    &__title {
+        margin-bottom: .5rem;
+        font-family: $font-raleway;
+        line-height: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        color: $color-brown;
+
+        @include mq(desktop-wide, min) {
+            font-size: 1.5rem;
+          }
+    }
+
+    // Subtitle
+    &__subtitle {
+        font-family: $font-montserrat;
+        font-size: .9rem;
+        color: darken($color-gray, 30%);
+    }
+
+    // Icon Box
+    &__icon-box {
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba($color-black, .8);
+    }
+
+    // ICONS
+    &__icon-link,
+    &__icon-search {
+        display: block;
+        position: absolute;
+        top: 35%;
+        color: $color-white;
+        font-size: 1.7rem;
+        @include ease-in;
+
+        &:hover {
+            color: $color-brown;
+        }
+    }
+
+    // Icon Link
+    &__icon-link {
+        left: 35%;
+    }
+
+    // Icon Search
+    &__icon-search {
+        right: 35%;
+    }
+}

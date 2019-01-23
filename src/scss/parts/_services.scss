@@ -1,0 +1,85 @@
+// Services
+
+.services {
+
+    // Wrapper
+    &__wrapper {
+        display: flex;
+        padding: 5rem 0;
+        font-size: 0;
+
+        @include mq(tablet, max) {
+            padding-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+    }
+
+    // Item
+    &__item {
+        width: 25%;
+        position: relative;
+        text-align: center;
+        color: darken($color-brown, 20%);
+        @include ease-in;
+
+        @include mq(tablet, max) {
+            width: 50%;
+            margin-bottom: 6rem;
+        }
+
+        @include mq(phone-wide, max) {
+            width: 100%;
+        }
+
+        @include mq(desktop-wide, min) {
+            margin-bottom: 3rem;
+          }
+
+        &::after {
+            position: absolute;
+            bottom: -10%;
+            left: 30%;
+            content: '';
+            display: block;
+            width: 40%;
+            height: 3px;
+            background: #f1eee9;
+            @include ease-in;
+        }
+
+        &:hover {
+            color: darken($color-brown, 10%);
+
+            &::after {
+                background: darken($color-brown, 10%);
+            }
+        }
+    }
+
+    // Icon
+    &__icon {
+        margin-bottom: 1em;
+        font-size: 4rem;
+    }
+
+    // Title
+    &__title {
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    // Text
+    &__text {
+        padding: 1rem 1.5rem;
+        font-family: $font-montserrat;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 300;
+
+        @include mq(desktop-wide, min) {
+            font-size: 1.2rem;
+          }
+    }
+}

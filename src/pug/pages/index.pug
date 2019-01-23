@@ -1,0 +1,78 @@
+doctype html
+
+html(lang="en")
+
+  head
+    // Site Title
+    title Waxom
+
+    // Meta
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(charset="utf-8")
+
+    //Favicon
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    link(rel="manifest", href="img/favicon/site.webmanifest")
+    link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="#5bbad5")
+    link(rel="shortcut icon", href="img/favicon/favicon.ico")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="msapplication-config", content="img/favicon/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+
+    // Stylesheets
+    //- Fonts
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Raleway:300,400,700|Roboto:300,400,700")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.ttf")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/fonts/slick.woff")
+    //- Slick Slider
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/ajax-loader.gif")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css")
+    //- Animate CSS
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
+    link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    //- Style CSS
+    link(rel="stylesheet" href="css/style.min.css")
+
+    body
+
+      //- Loader
+      include ../elements/_loader
+
+      //- Mobile Menu
+      include ../elements/_menu
+      include ../elements/_sandwich
+    
+      include ../parts/_header
+      include ../parts/_hero
+
+      main
+
+        include ../parts/_services
+        include ../parts/_products
+        include ../parts/_purchase
+        include ../parts/_portfolio
+        include ../parts/_presentation
+        include ../parts/_features
+        include ../parts/_result
+        include ../parts/_recents
+        include ../parts/_clients
+        
+      footer
+
+        include ../parts/_footer
+
+//- SVG Sprite
+include ../elements/_sprite
+
+
+// Javascript
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")
+script(src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+script(src="js/main.min.js")    

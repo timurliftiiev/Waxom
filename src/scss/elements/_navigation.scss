@@ -1,0 +1,35 @@
+// Navigation
+.nav {
+    @include mq(tablet-wide, max) {
+        display: none;    
+    }
+
+    &__list {
+        display: flex;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 0 1rem;
+    }
+
+    &__link {
+        font-size: .8rem;
+        text-decoration: none;
+        color: $color-gray;
+
+        &:hover {
+            color: $color-brown;
+            @include ease-in;
+        }
+
+        &--active {
+            color: $color-brown;
+        }
+
+        @include mq(desktop-wide, min) {
+            font-size: 1.2rem;
+        }
+    }
+}

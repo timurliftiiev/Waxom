@@ -1,0 +1,42 @@
+// Product
+
+.product {
+    position: relative;
+    background: $color-gray-light;
+    padding: 5rem 0 0;
+
+    // Example   
+    &__example {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    }
+
+    // Image
+    &__image {
+    font-size: 0;
+    z-index: 2;
+    
+    
+    // Left and Right Image
+    &--left,
+    &--right {
+        position: absolute;
+        z-index: 1;
+
+        @include mq(tablet-wide, max) {
+            position: relative;
+        }
+    }
+
+    // Left
+    &--left {
+         left: 7%;
+        }
+
+    // Right
+    &--right {
+         right: 7%;
+        }
+    }
+}
