@@ -27,7 +27,7 @@ function imageLoaded() {
 
   if ($imagesLoaded >= $imagesAmount) {
       setTimeout(function() {
-                  if (!$loader.hasClass('js-hidde')) {
+                  if (!$loader.hasClass('js-hidden')) {
                       $loader.addClass('js-hidden');
                   }
               }, 1000);
