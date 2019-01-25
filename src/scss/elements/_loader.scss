@@ -20,6 +20,10 @@
         line-height: 10rem;
         color: $color-beige;
         @include centered;
+
+        @include mq('phone-wide', max) {
+            font-size: 7rem;
+        }
     }
 
     // Scale 
@@ -27,12 +31,16 @@
         display: block;
         width: 0%;
         height: 100%;
-        background: lighten($color-black-dark, 1%);
+        background: lighten($color-black, 10%);
+
+        @include mq('desktop', min) {
+            display: none;
+        }
     }
 
     // Hidden
-    &.js-hidden {
-        visibility: hidden;
-        opacity: 0;
-    }
+    // &.js-hidden {
+    //     visibility: hidden;
+    //     opacity: 0;
+    // }
 }
