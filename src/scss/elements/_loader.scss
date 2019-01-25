@@ -39,8 +39,8 @@
     }
 
     // Hidden
-    // &.js-hidden {
-    //     visibility: hidden;
-    //     opacity: 0;
-    // }
+    &.js-hidden {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
